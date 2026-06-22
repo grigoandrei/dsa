@@ -34,7 +34,7 @@ class DoublyLinkedList:
     def pop(self):
         if self.length == 0:
             return None
-            temp = self.tail
+        temp = self.tail
         if self.length == 1:
             self.head = None
             self.tail = None
