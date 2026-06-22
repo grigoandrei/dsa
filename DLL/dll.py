@@ -73,6 +73,7 @@ class DoublyLinkedList:
         self.length -= 1
         return tmp
 
+    # O(n/2)
     def get(self, index):
         if index < 0 or index >= self.length:
             return None
@@ -85,3 +86,11 @@ class DoublyLinkedList:
             for _ in range(self.length -1, index, -1):
                 temp = temp.prev
         return temp
+
+    # O(n/2)
+    def set_value(self, index, value):
+        temp = self.get(index)
+        if temp:
+            temp.value = value
+            return True
+        return False
